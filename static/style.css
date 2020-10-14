@@ -1,0 +1,13 @@
+div.container {
+  padding: 10px 10px;
+  width: 400px;
+}
+
+.jumbo{
+    height: 70px;
+    border-radius : 45px;
+    background-color : black;
+    text-align : left;
+    margin: 50px;
+    padding:none;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Favorite Quotes</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+ <nav style="margin-top:25px;margin-left:25px">
+     <div class="container">
+
+        <div>
+           <button type="button" class="btn btn-primary" style="background-color:gray;">
+              <a class="btn btn-primary" href="{{ url_for('quotes') }}" style="text-decoration:none;font-weight:Bold">Add a quote </a>
+           </button>
+        </div>
+
+     </div>
+ </nav>
+ <br>
+<div class="container" role="main">
+
+     <div class="jumbotron">
+        <h1> Favorite Quotes </h1>
+     </div>
+     <!-- for loop starts here  -->
+     {% for r in result %}
+     <div style="color:#fff;background-color:blue">
+        <h6>{{ r.author }}</h6> <!--not getting jumbotron, why ??-->
+     </div>
+
+     <div class="jumbo">
+         <h6>{{ r.quote }}</h6>
+     </div>
+    <!--for loop ends here-->
+    {% endfor %}
+</div>
+</body>
+</html>
